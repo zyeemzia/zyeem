@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyeem Bin Zia | Software Engineer &amp; Systems Architect</title>
+<meta name="description" content="Zyeem Bin Zia is a software engineer and systems architect, the founder of ZyeemZia&trade; — offline-first applications, a free certification academy, and independent security research.">
+<meta name="author" content="Zyeem Bin Zia">
+<link rel="canonical" href="https://zyeem.zyeemzia.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Zyeem Bin Zia | Software Engineer &amp; Systems Architect">
+<meta property="og:description" content="Founder of ZyeemZia&trade;. Offline-first applications, a free certification academy, and independent security research.">
+<meta property="og:url" content="https://zyeem.zyeemzia.com/">
+<meta property="og:image" content="https://zyeem.zyeemzia.com/zyeem.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zyeemzia.com/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="https://zyeemzia.com/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zyeem Bin Zia",
+  "url": "https://zyeem.zyeemzia.com/",
+  "image": "https://zyeem.zyeemzia.com/zyeem.jpg",
+  "jobTitle": "Software Engineer and Systems Architect",
+  "email": "admin@zyeemzia.com",
+  "knowsAbout": ["Software engineering", "Mobile application development", "Network engineering", "Cybersecurity", "Artificial intelligence", "Post-quantum cryptography", "Technical education"],
+  "sameAs": [
+    "https://zyeemzia.com/",
+    "https://academy.zyeemzia.com/",
+    "https://zbzgames.zyeemzia.com/",
+    "https://github.com/zyeemzia",
+    "https://play.google.com/store/apps/developer?id=ZyeemZia"
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f8fafc; --panel:#ffffff; --ink:#0f172a; --body:#334155; --muted:#64748b;
+  --line:#e2e8f0; --line-strong:#cbd5e1; --accent:#0f766e; --accent-soft:#f0fdfa;
+  --shadow:0 1px 2px rgba(15,23,42,.04), 0 12px 32px -20px rgba(15,23,42,.28);
+}
+html[data-theme="dark"]{
+  --bg:#0b1220; --panel:#111a2b; --ink:#e8eef7; --body:#b8c5d6; --muted:#7f8ea5;
+  --line:#1e293b; --line-strong:#2b3a50; --accent:#2dd4bf; --accent-soft:#0f2b2a;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 36px -22px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--body);
+  font-family:'Spectral',Georgia,'Times New Roman',serif;
+  font-size:17px; line-height:1.75; -webkit-font-smoothing:antialiased;
+  transition:background .3s ease,color .3s ease;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px;}
+h1,h2,h3,h4,.disp{font-family:'Rajdhani',system-ui,sans-serif;color:var(--ink);margin:0;}
+a{color:inherit;}
+.eyebrow{
+  font-family:'Rajdhani',system-ui,sans-serif;font-weight:600;font-size:12px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+}
+.rule{height:1px;background:var(--line);border:0;margin:0;}
+
+/* ---------- top bar ---------- */
+.top{
+  position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px;}
+.mark{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.06em;color:var(--ink);text-decoration:none;font-size:17px;}
+.mark span{color:var(--accent);}
+.topnav{display:flex;align-items:center;gap:22px;}
+.topnav a{
+  font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;
+}
+.topnav a:hover{color:var(--accent);}
+.tbtn{
+  width:34px;height:34px;border:1px solid var(--line-strong);border-radius:50%;background:var(--panel);
+  color:var(--muted);cursor:pointer;display:grid;place-items:center;font-size:14px;line-height:1;transition:.2s;
+}
+.tbtn:hover{color:var(--accent);border-color:var(--accent);}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 56px;}
+.hero-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start;}
+.hero h1{font-size:clamp(44px,7vw,74px);font-weight:700;line-height:.98;letter-spacing:-.015em;}
+.hero .role{
+  font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--accent);margin:18px 0 0;
+}
+.standfirst{font-size:20px;line-height:1.65;color:var(--body);margin:22px 0 0;max-width:46ch;font-weight:300;}
+.portrait{
+  position:relative;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--panel);box-shadow:var(--shadow);
+}
+.portrait img{display:block;width:100%;height:auto;}
+html[data-theme="dark"] .portrait img{filter:brightness(.92) contrast(1.04);}
+.portrait figcaption{
+  font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);padding:11px 14px;border-top:1px solid var(--line);
+}
+
+/* ---------- counters ---------- */
+.counts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);}
+.counts .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+.count{padding:28px 10px;text-align:center;border-right:1px solid var(--line);}
+.count:last-child{border-right:0;}
+.count b{display:block;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:38px;line-height:1;color:var(--ink);}
+.count span{
+  display:block;margin-top:8px;font-family:'Rajdhani',sans-serif;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+
+/* ---------- sections ---------- */
+section{padding:66px 0;}
+.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;}
+.sechead h2{font-size:30px;font-weight:600;letter-spacing:.01em;}
+.sechead .num{
+  font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;
+  color:var(--accent);padding-top:4px;
+}
+.prose{max-width:66ch;}
+.prose p{margin:0 0 22px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:var(--ink);font-weight:500;}
+.lead::first-letter{
+  float:left;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:58px;line-height:.82;
+  padding:6px 12px 0 0;color:var(--accent);
+}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px 24px 28px;
+  box-shadow:var(--shadow);transition:border-color .25s,transform .25s;
+}
+.card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.card h3{font-size:19px;font-weight:600;margin:10px 0 10px;}
+.card p{margin:0;font-size:15.5px;line-height:1.7;color:var(--body);}
+.card .tag{
+  font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+}
+
+/* ---------- work index ---------- */
+.index{border-top:1px solid var(--line-strong);}
+.row{
+  display:grid;grid-template-columns:200px 1fr auto;gap:28px;align-items:baseline;
+  padding:26px 4px;border-bottom:1px solid var(--line);text-decoration:none;
+  transition:background .2s,padding .2s;
+}
+.row:hover{background:var(--accent-soft);padding-left:12px;padding-right:12px;}
+.row h3{font-size:20px;font-weight:600;}
+.row .host{
+  display:block;margin-top:4px;font-family:'Rajdhani',sans-serif;font-size:11.5px;
+  letter-spacing:.14em;text-transform:lowercase;color:var(--muted);
+}
+.row p{margin:0;font-size:15.5px;line-height:1.65;}
+.row .go{font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:.14em;color:var(--accent);white-space:nowrap;}
+
+/* ---------- principles ---------- */
+.principles{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.plist{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.p-item h4{font-size:17px;font-weight:600;margin-bottom:8px;}
+.p-item p{margin:0;font-size:14.5px;line-height:1.65;color:var(--muted);}
+.p-item .bar{width:28px;height:2px;background:var(--accent);margin-bottom:14px;}
+
+/* ---------- credentials ---------- */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.cred{border-left:2px solid var(--accent);padding:4px 0 4px 20px;}
+.cred h4{font-size:18px;font-weight:600;margin-bottom:4px;}
+.cred span{font-size:15px;color:var(--muted);}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:76px 0;}
+.contact h2{font-size:34px;font-weight:600;margin-bottom:14px;}
+.contact p{margin:0 auto 26px;max-width:52ch;}
+.mail{
+  display:inline-block;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;color:var(--panel);background:var(--ink);
+  padding:14px 30px;border-radius:3px;transition:background .25s;
+}
+.mail:hover{background:var(--accent);}
+.links{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.links a{
+  font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);border:1px solid var(--line-strong);border-radius:999px;
+  padding:9px 18px;background:var(--panel);transition:.2s;
+}
+.links a:hover{color:var(--accent);border-color:var(--accent);}
+
+footer{border-top:1px solid var(--line);padding:30px 0 46px;text-align:center;}
+footer p{margin:0;font-family:'Rajdhani',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .portrait{max-width:280px;}
+  .cards{grid-template-columns:1fr;}
+  .plist{grid-template-columns:1fr 1fr;}
+  .counts .wrap{grid-template-columns:1fr 1fr;}
+  .count:nth-child(2){border-right:0;}
+  .count:nth-child(1),.count:nth-child(2){border-bottom:1px solid var(--line);}
+  .creds{grid-template-columns:1fr;}
+  .row{grid-template-columns:1fr;gap:10px;}
+  .row .go{display:none;}
+  .topnav a{display:none;}
+}
+@media (max-width:540px){
+  body{font-size:16px;}
+  .wrap{padding:0 20px;}
+  .plist{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" class="mark">ZYEEM<span>·</span>BIN<span>·</span>ZIA</a>
+    <nav class="topnav">
+      <a href="#biography">Biography</a>
+      <a href="#practice">Practice</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <button class="tbtn" id="themeBtn" type="button" aria-label="Switch colour theme">&#9789;</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">ZyeemZia&trade; &middot; Profile</p>
+        <h1>Zyeem<br>Bin&nbsp;Zia</h1>
+        <p class="role">Software Engineer &middot; Systems Architect &middot; Founder, ZyeemZia&trade;</p>
+        <p class="standfirst">He builds software that still works when the network does not &mdash; and gives away the education that explains how it was built.</p>
+      </div>
+      <figure class="portrait" style="margin:0;">
+        <img src="zyeem.jpg" alt="Portrait of Zyeem Bin Zia" width="720" height="973">
+        <figcaption>Dhaka, Bangladesh</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="counts">
+    <div class="wrap">
+      <div class="count"><b>8</b><span>Published applications</span></div>
+      <div class="count"><b>24</b><span>Courses authored</span></div>
+      <div class="count"><b>1,012</b><span>Lessons written</span></div>
+      <div class="count"><b>43</b><span>Public repositories</span></div>
+    </div>
+  </div>
+
+  <section id="biography" class="wrap">
+    <div class="sechead"><span class="num">01</span><h2>Biography</h2></div>
+    <div class="prose">
+      <p class="lead">Zyeem Bin Zia is a software engineer and systems architect based in Dhaka, Bangladesh, and the founder of <strong>ZyeemZia&trade;</strong> &mdash; an independent studio that designs, builds and publishes its own software end to end. He writes the applications, the servers, the course material and the sites they are delivered on. There is no team behind the name; the catalogue is the record of one engineer working across the whole stack.</p>
+
+      <p>His training sits across two disciplines. A <strong>Master of Science in Computer Science</strong> follows a <strong>Bachelor of Science in Electrical, Electronics and Communication Engineering</strong>, and the combination shows in what he chooses to build: software that lives close to hardware and to the physics of the field &mdash; coordinate systems, signal and telemetry, sensors, radio and timing &mdash; rather than software that assumes a data centre is always one hop away. That foundation is extended by professional specialisations from <strong>Google</strong>, <strong>IBM</strong> and a number of academic institutions, across networking, cybersecurity, machine learning and project leadership.</p>
+
+      <p>The work divides into three strands. The first is a catalogue of <strong>offline-first Android applications</strong>, written in Flutter and Dart and published on Google Play for users worldwide: document and office tooling with on-device OCR, a format-agnostic coordinate conversion engine with Kalman-filtered route tracking, signal and Morse training suites, precision telemetry and vector analysis, and mapping utilities that keep working with the radio off. The second is <strong>ZyeemZia&trade; Academy</strong>, a free certification campus of twenty-four courses and more than a thousand lessons, spanning networking, cybersecurity, artificial intelligence, project and service management, law and five languages &mdash; each with an interactive course, a printable book, a server-graded exam and a credential anyone can verify. The third is <strong>research</strong>: most recently a reinforcement-learning deception system that protects a live post-quantum IoT gateway, built on ML-KEM-768 over an ESP32, against reconnaissance, downgrade and denial-of-service attacks.</p>
+
+      <p>A consistent engineering position runs through all of it. His applications do not require an account, do not carry advertising, and do not transmit the user's work anywhere: documents, scans, routes and progress stay on the device that produced them. The courses are free, in full, with no tier above them. The stated reason is practical rather than ideological &mdash; software built for people working at the edge of coverage has to assume the connection will fail, and the cheapest way to protect data is never to collect it.</p>
+
+      <p>Alongside the core studio he runs <strong>ZBZGames&trade;</strong>, an interactive entertainment branch producing offline simulation and arcade titles, and <strong>ZQuiz</strong>, a live multiplayer quiz platform for classrooms and teams. His current research interest is the intersection he keeps returning to: <strong>AI-driven cyber defence for cyber-physical and post-quantum systems</strong>.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="practice" class="wrap">
+    <div class="sechead"><span class="num">02</span><h2>Practice</h2></div>
+    <div class="cards">
+      <article class="card">
+        <p class="tag">Applications</p>
+        <h3>Offline-first mobile</h3>
+        <p>Flutter and Dart on Android. On-device OCR and document processing, coordinate and unit conversion engines, compass, GPS and clinometer telemetry, offline topographic caching, and route tracking that survives a crash mid-session. Everything computes locally.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Platforms</p>
+        <h3>Web systems &amp; delivery</h3>
+        <p>JavaScript front ends with Python and Flask services behind them: a course and examination engine with server-side grading and verifiable credentials, analytics dashboards, a live multiplayer quiz server, and the site network that publishes all of it.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Research</p>
+        <h3>Security &amp; AI defence</h3>
+        <p>Post-quantum cryptography on constrained hardware, adaptive deception driven by reinforcement learning, and the defence of cyber-physical systems &mdash; protecting real embedded gateways rather than simulated ones.</p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="work" class="wrap">
+    <div class="sechead"><span class="num">03</span><h2>Selected work</h2></div>
+    <div class="index">
+      <a class="row" href="https://zyeemzia.com/" target="_blank" rel="noopener">
+        <div><h3>ZyeemZia&trade;</h3><span class="host">zyeemzia.com</span></div>
+        <p>The studio itself: the full application catalogue, the Academy, the policy hub and the support desk, on one dashboard.</p>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="row" href="https://academy.zyeemzia.com/" target="_blank" rel="noopener">
+        <div><h3>ZyeemZia&trade; Academy</h3><span class="host">academy.zyeemzia.com</span></div>
+        <p>Twenty-four free courses and twenty certification tracks &mdash; networking, cybersecurity, AI, management, law and languages &mdash; each with lessons, labs, a printable book, a graded exam and a verifiable certificate.</p>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="row" href="https://play.google.com/store/apps/developer?id=ZyeemZia" target="_blank" rel="noopener">
+        <div><h3>Field applications</h3><span class="host">google play</span></div>
+        <p>The published mobile catalogue: office and document tooling, coordinate conversion, signal training, telemetry and precision mapping. All offline, all on-device, no accounts.</p>
+        <span class="go">Open &rarr;</span>
+      </a>
+      <a class="row" href="https://zbzgames.zyeemzia.com/" target="_blank" rel="noopener">
+        <div><h3>ZBZGames&trade;</h3><span class="host">zbzgames.zyeemzia.com</span></div>
+        <p>The interactive entertainment branch &mdash; offline simulation and arcade titles with procedurally generated assets, researched archives and privacy-first architecture.</p>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="row" href="https://github.com/zyeemzia/pqc-deception-honeypot" target="_blank" rel="noopener">
+        <div><h3>PQC deception honeypot</h3><span class="host">research &middot; open source</span></div>
+        <p>Reinforcement-learning adaptive deception protecting a real ESP32 ML-KEM-768 post-quantum IoT gateway from reconnaissance, downgrade and denial-of-service attacks.</p>
+        <span class="go">Code &rarr;</span>
+      </a>
+      <a class="row" href="https://github.com/zyeemzia" target="_blank" rel="noopener">
+        <div><h3>Source</h3><span class="host">github.com/zyeemzia</span></div>
+        <p>Forty-three public repositories: the course engines, the site network, the research code and the tooling behind them.</p>
+        <span class="go">Browse &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="principles">
+    <div class="wrap">
+      <div class="sechead"><span class="num">04</span><h2>How the work is built</h2></div>
+      <div class="plist">
+        <div class="p-item"><div class="bar"></div><h4>Offline first</h4><p>Connectivity is treated as an optional extra, never a dependency. If it works without a network, it works everywhere.</p></div>
+        <div class="p-item"><div class="bar"></div><h4>On the device</h4><p>Documents, scans, routes and progress stay where they were created. The cheapest data to protect is data never collected.</p></div>
+        <div class="p-item"><div class="bar"></div><h4>No gate</h4><p>No accounts, no advertising, no paid tier above the free one. Every course and every credential is free in full.</p></div>
+        <div class="p-item"><div class="bar"></div><h4>Built in house</h4><p>Application, server, course material and site are written by one engineer, which keeps the whole stack answerable to one standard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sechead"><span class="num">05</span><h2>Education &amp; credentials</h2></div>
+    <div class="creds">
+      <div class="cred"><h4>Master of Science</h4><span>Computer Science</span></div>
+      <div class="cred"><h4>Bachelor of Science</h4><span>Electrical, Electronics &amp; Communication Engineering</span></div>
+      <div class="cred"><h4>Professional specialisations</h4><span>Google &middot; IBM &middot; academic institutions</span></div>
+      <div class="cred"><h4>Fields</h4><span>Networking &middot; cybersecurity &middot; machine learning &middot; project leadership</span></div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="contact" class="contact wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Open to collaboration</h2>
+    <p>For software support, research collaboration, Academy credentials or partnership enquiries, a message reaches the desk directly.</p>
+    <a class="mail" href="mailto:admin@zyeemzia.com">admin@zyeemzia.com</a>
+    <div class="links">
+      <a href="https://zyeemzia.com/" target="_blank" rel="noopener">ZyeemZia</a>
+      <a href="https://academy.zyeemzia.com/" target="_blank" rel="noopener">Academy</a>
+      <a href="https://zbzgames.zyeemzia.com/" target="_blank" rel="noopener">ZBZGames</a>
+      <a href="https://github.com/zyeemzia" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://play.google.com/store/apps/developer?id=ZyeemZia" target="_blank" rel="noopener">Google Play</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Copyright &copy; ZyeemZia&trade;</p>
+    <p>Zyeem Bin Zia &middot; Dhaka, Bangladesh</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  var saved = null;
+  try { saved = localStorage.getItem('zbz-theme'); } catch(e){}
+  if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) saved = 'dark';
+  if (saved) root.setAttribute('data-theme', saved);
+  function paint(){ btn.innerHTML = root.getAttribute('data-theme') === 'dark' ? '&#9788;' : '&#9789;'; }
+  paint();
+  btn.addEventListener('click', function(){
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('zbz-theme', next); } catch(e){}
+    paint();
+  });
+})();
+</script>
+</body>
+</html>
