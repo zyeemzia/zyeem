@@ -26,7 +26,7 @@
   "url": "https://zyeem.zyeemzia.com/",
   "image": "https://zyeem.zyeemzia.com/zyeem.jpg",
   "jobTitle": "Owner, Founder and Chief Executive Officer, ZyeemZia",
-  "email": "admin@zyeemzia.com",
+  "email": "zyeem@zyeemzia.com",
   "knowsAbout": ["Software engineering", "Mobile application development", "Network engineering", "Cybersecurity", "Artificial intelligence", "Post-quantum cryptography", "Technical education"],
   "sameAs": [
     "https://zyeemzia.com/",
@@ -102,7 +102,20 @@ a{color:inherit;}
   background:var(--panel);box-shadow:var(--shadow);
 }
 .portrait img{display:block;width:100%;height:auto;}
-html[data-theme="dark"] .portrait img{filter:brightness(.92) contrast(1.04);}
+html[data-theme="dark"] .portrait .front{filter:brightness(.92) contrast(1.04);}
+/* tap the portrait to flip between the photo and the ZyeemZia logo */
+.flip{display:block;position:relative;width:100%;padding:0;border:0;background:#13202f;cursor:pointer;perspective:1400px;aspect-ratio:720/973;}
+.flip .face{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .7s cubic-bezier(.2,.8,.2,1);}
+.flip .back{transform:rotateY(180deg);}
+.flip[aria-pressed="true"] .front{transform:rotateY(-180deg);}
+.flip[aria-pressed="true"] .back{transform:rotateY(0);}
+.flip:focus-visible{outline:2px solid var(--gold,#c9a048);outline-offset:-4px;}
+.portrait figcaption{display:flex;align-items:center;gap:10px;}
+.portrait figcaption .dots{display:inline-flex;gap:5px;margin-left:auto;}
+.portrait figcaption .dots i{width:6px;height:6px;border-radius:50%;background:var(--line);transition:background .3s;}
+.portrait figcaption .dots i.on{background:var(--muted);}
+.portrait figcaption .hint{opacity:.7;}
+@media (prefers-reduced-motion:reduce){.flip .face{transition:opacity .3s;}.flip .back{transform:none;opacity:0;}.flip[aria-pressed="true"] .front{transform:none;opacity:0;}.flip[aria-pressed="true"] .back{opacity:1;}}
 .portrait figcaption{
   font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--muted);padding:11px 14px;border-top:1px solid var(--line);
@@ -250,8 +263,11 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
         <p class="standfirst">He builds software that still works when the network does not &mdash; and gives away the education that explains how it was built.</p>
       </div>
       <figure class="portrait" style="margin:0;">
-        <img src="zyeem.jpg" alt="Portrait of Zyeem Bin Zia" width="720" height="973">
-        <figcaption>Dhaka, Bangladesh</figcaption>
+        <button class="flip" id="flip" type="button" aria-label="Show the ZyeemZia logo" aria-pressed="false">
+          <img class="face front" src="zyeem.jpg" alt="Portrait of Zyeem Bin Zia" width="720" height="973">
+          <img class="face back" src="zyeem-logo.jpg" alt="The ZyeemZia logo" width="720" height="973" loading="lazy">
+        </button>
+        <figcaption><span id="flipLabel">Zyeem Bin Zia</span><span class="dots" aria-hidden="true"><i class="on"></i><i></i></span><span class="hint">Tap to flip</span></figcaption>
       </figure>
     </div>
   </div>
@@ -276,7 +292,7 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
 
       <p>A consistent engineering position runs through all of it. His applications do not require an account, do not carry advertising, and do not transmit the user's work anywhere: documents, scans, routes and progress stay on the device that produced them. The courses are free, in full, with no tier above them. The stated reason is practical rather than ideological &mdash; software built for people working at the edge of coverage has to assume the connection will fail, and the cheapest way to protect data is never to collect it.</p>
 
-      <p>Alongside the core studio he runs <strong>ZBZGames&trade;</strong>, an interactive entertainment branch producing offline simulation and arcade titles and a free browser arcade of nineteen original games, <strong>ZQuiz</strong>, a live multiplayer quiz platform for classrooms and teams, and <strong>ZyeemZia&trade; AI</strong>, a team of free AI agents on open-weight models that also guides visitors through the whole estate. His current research interest is the intersection he keeps returning to: <strong>AI-driven cyber defence for cyber-physical and post-quantum systems</strong>.</p>
+      <p>Alongside the core studio he runs <strong>ZBZGames&trade;</strong>, an interactive entertainment branch producing offline simulation and arcade titles and a free browser arcade of twenty-two original games, <strong>ZQuiz</strong>, a live multiplayer quiz platform for classrooms and teams, and <strong>ZyeemZia&trade; AI</strong>, a team of free AI agents on open-weight models that also guides visitors through the whole estate. His current research interest is the intersection he keeps returning to: <strong>AI-driven cyber defence for cyber-physical and post-quantum systems</strong>.</p>
     </div>
   </section>
 
@@ -330,7 +346,7 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
       </a>
       <a class="row" href="https://zbzgames.zyeemzia.com/" target="_blank" rel="noopener">
         <div><h3>ZBZGames&trade;</h3><span class="host">zbzgames.zyeemzia.com</span></div>
-        <p>The interactive entertainment branch &mdash; offline simulation and arcade titles on Google Play, 1971 BAF &mdash; the Windows game he made as a child in 2004 &mdash; and the ZBZGames™ Arcade: nineteen original free browser games, with a Kids corner, that install and play offline.</p>
+        <p>The interactive entertainment branch &mdash; offline simulation and arcade titles on Google Play, 1971 BAF &mdash; the Windows game he made as a child in 2004 &mdash; and the ZBZGames™ Arcade: twenty-two original free browser games, with a Kids corner, that install and play offline.</p>
         <span class="go">Visit &rarr;</span>
       </a>
       <div class="row row-static">
@@ -369,7 +385,7 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
     <p class="eyebrow">Get in touch</p>
     <h2>Open to collaboration</h2>
     <p>For software support, research collaboration, Academy credentials or partnership enquiries, a message reaches the desk directly.</p>
-    <a class="mail" href="mailto:admin@zyeemzia.com">admin@zyeemzia.com</a>
+    <a class="mail" href="mailto:zyeem@zyeemzia.com">zyeem@zyeemzia.com</a>
     <div class="links">
       <a href="https://zyeemzia.com/" target="_blank" rel="noopener">ZyeemZia</a>
       <a href="https://academy.zyeemzia.com/" target="_blank" rel="noopener">Academy</a>
@@ -383,11 +399,22 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
 <footer>
   <div class="wrap">
     <p>Copyright &copy; ZyeemZia&trade;</p>
-    <p>Zyeem Bin Zia &middot; Dhaka, Bangladesh</p>
+    <p>Zyeem Bin Zia</p>
   </div>
 </footer>
 
 <script>
+(function(){
+  var f = document.getElementById('flip'); if (!f) return;
+  var label = document.getElementById('flipLabel'), dots = document.querySelectorAll('.portrait .dots i');
+  f.addEventListener('click', function(){
+    var on = f.getAttribute('aria-pressed') !== 'true';
+    f.setAttribute('aria-pressed', String(on));
+    f.setAttribute('aria-label', on ? 'Show the portrait' : 'Show the ZyeemZia logo');
+    label.textContent = on ? 'ZyeemZia\u2122' : 'Zyeem Bin Zia';
+    dots[0].className = on ? '' : 'on'; dots[1].className = on ? 'on' : '';
+  });
+})();
 (function(){
   var root = document.documentElement, btn = document.getElementById('themeBtn');
   var saved = null;
