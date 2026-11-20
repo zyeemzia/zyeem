@@ -103,19 +103,18 @@ a{color:inherit;}
 }
 .portrait img{display:block;width:100%;height:auto;}
 html[data-theme="dark"] .portrait .front{filter:brightness(.92) contrast(1.04);}
-/* tap the portrait to flip between the photo and the ZyeemZia logo */
-.flip{display:block;position:relative;width:100%;padding:0;border:0;background:#13202f;cursor:pointer;perspective:1400px;aspect-ratio:720/973;}
-.flip .face{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .7s cubic-bezier(.2,.8,.2,1);}
-.flip .back{transform:rotateY(180deg);}
-.flip[aria-pressed="true"] .front{transform:rotateY(-180deg);}
-.flip[aria-pressed="true"] .back{transform:rotateY(0);}
+/* tap the portrait to turn through: photo, office, logo */
+.flip{display:block;position:relative;width:100%;padding:0;border:0;background:#13202f;cursor:pointer;perspective:1400px;aspect-ratio:720/973;overflow:hidden;}
+.flip .face{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:rotateY(70deg) scale(.96);transform-origin:left center;transition:opacity .55s ease,transform .7s cubic-bezier(.2,.8,.2,1);}
+.flip .face.on{opacity:1;transform:none;}
+.flip .face.out{opacity:0;transform:rotateY(-70deg) scale(.96);transform-origin:right center;}
 .flip:focus-visible{outline:2px solid var(--gold,#c9a048);outline-offset:-4px;}
 .portrait figcaption{display:flex;align-items:center;gap:10px;}
 .portrait figcaption .dots{display:inline-flex;gap:5px;margin-left:auto;}
 .portrait figcaption .dots i{width:6px;height:6px;border-radius:50%;background:var(--line);transition:background .3s;}
 .portrait figcaption .dots i.on{background:var(--muted);}
 .portrait figcaption .hint{opacity:.7;}
-@media (prefers-reduced-motion:reduce){.flip .face{transition:opacity .3s;}.flip .back{transform:none;opacity:0;}.flip[aria-pressed="true"] .front{transform:none;opacity:0;}.flip[aria-pressed="true"] .back{opacity:1;}}
+@media (prefers-reduced-motion:reduce){.flip .face,.flip .face.out{transform:none;transition:opacity .3s;}}
 .portrait figcaption{
   font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--muted);padding:11px 14px;border-top:1px solid var(--line);
@@ -263,11 +262,12 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
         <p class="standfirst">He builds software that still works when the network does not &mdash; and gives away the education that explains how it was built.</p>
       </div>
       <figure class="portrait" style="margin:0;">
-        <button class="flip" id="flip" type="button" aria-label="Show the ZyeemZia logo" aria-pressed="false">
-          <img class="face front" src="zyeem.jpg" alt="Portrait of Zyeem Bin Zia" width="720" height="973">
-          <img class="face back" src="zyeem-logo.jpg" alt="The ZyeemZia logo" width="720" height="973" decoding="async">
+        <button class="flip" id="flip" type="button" aria-label="Next picture (1 of 3)">
+          <img class="face on" src="zyeem.jpg" alt="Portrait of Zyeem Bin Zia" width="720" height="973">
+          <img class="face" src="zyeem-office.jpg" alt="Zyeem Bin Zia at his desk in the ZyeemZia office" width="720" height="973" decoding="async">
+          <img class="face" src="zyeem-logo.jpg" alt="The ZyeemZia logo" width="720" height="973" decoding="async">
         </button>
-        <figcaption><span id="flipLabel">Zyeem Bin Zia</span><span class="dots" aria-hidden="true"><i class="on"></i><i></i></span><span class="hint">Tap to flip</span></figcaption>
+        <figcaption><span id="flipLabel">Zyeem Bin Zia</span><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span class="hint">Tap to flip</span></figcaption>
       </figure>
     </div>
   </div>
@@ -406,13 +406,16 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
 <script>
 (function(){
   var f = document.getElementById('flip'); if (!f) return;
-  var label = document.getElementById('flipLabel'), dots = document.querySelectorAll('.portrait .dots i');
+  var faces = f.querySelectorAll('.face'), dots = document.querySelectorAll('.portrait .dots i');
+  var label = document.getElementById('flipLabel'), names = ['Zyeem Bin Zia', 'At the ZyeemZia office', 'ZyeemZia\u2122'], i = 0;
   f.addEventListener('click', function(){
-    var on = f.getAttribute('aria-pressed') !== 'true';
-    f.setAttribute('aria-pressed', String(on));
-    f.setAttribute('aria-label', on ? 'Show the portrait' : 'Show the ZyeemZia logo');
-    label.textContent = on ? 'ZyeemZia\u2122' : 'Zyeem Bin Zia';
-    dots[0].className = on ? '' : 'on'; dots[1].className = on ? 'on' : '';
+    var prev = faces[i]; i = (i + 1) % faces.length;
+    prev.classList.remove('on'); prev.classList.add('out');
+    setTimeout(function(){ prev.classList.remove('out'); }, 700);
+    faces[i].classList.add('on');
+    for (var k = 0; k < dots.length; k++) dots[k].className = k === i ? 'on' : '';
+    label.textContent = names[i];
+    f.setAttribute('aria-label', 'Next picture (' + (i + 1) + ' of ' + faces.length + ')');
   });
 })();
 (function(){
