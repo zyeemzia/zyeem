@@ -140,6 +140,16 @@ section{padding:66px 0;}
   color:var(--accent);padding-top:4px;
 }
 .prose{max-width:66ch;}
+.bio-grid{display:grid;grid-template-columns:minmax(0,66ch) minmax(240px,1fr);gap:48px;align-items:start;}
+.bio-aside{position:sticky;top:84px;display:flex;flex-direction:column;gap:14px;}
+.bio-aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
+.bio-aside .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;}
+.bio-aside h4{margin:0 0 4px;font-size:15px;color:var(--ink);}
+.bio-aside .st{display:inline-block;font-size:11px;color:var(--accent);background:var(--accent-soft);border-radius:99px;padding:2px 9px;margin:0 0 8px;}
+.bio-aside p{margin:0;font-size:14px;line-height:1.55;color:var(--body);}
+.bio-aside ul{margin:0;padding-left:18px;font-size:14px;line-height:1.7;color:var(--body);}
+.bio-aside a{color:var(--accent);}
+@media (max-width:900px){.bio-grid{grid-template-columns:1fr;gap:28px;}.bio-aside{position:static;}}
 .prose p{margin:0 0 22px;}
 .prose p:last-child{margin-bottom:0;}
 .prose strong{color:var(--ink);font-weight:500;}
@@ -283,6 +293,7 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
 
   <section id="biography" class="wrap">
     <div class="sechead"><span class="num">01</span><h2>Biography</h2></div>
+    <div class="bio-grid">
     <div class="prose">
       <p class="lead">Zyeem Bin Zia is the owner, founder and chief executive of <strong>ZyeemZia&trade;</strong>, and the engineer behind everything it publishes. A software engineer and systems architect based in Dhaka, Bangladesh, he runs the studio as an independent operation that designs, builds and ships its own software end to end &mdash; the applications, the servers, the course material and the sites they are delivered on. There is no team behind the name; the catalogue is the record of one engineer working across the whole stack.</p>
 
@@ -293,6 +304,24 @@ footer p + p{margin-top:8px;text-transform:none;letter-spacing:.04em;}
       <p>A consistent engineering position runs through all of it. His applications do not require an account, do not carry advertising, and do not transmit the user's work anywhere: documents, scans, routes and progress stay on the device that produced them. The courses are free, in full, with no tier above them. The stated reason is practical rather than ideological &mdash; software built for people working at the edge of coverage has to assume the connection will fail, and the cheapest way to protect data is never to collect it.</p>
 
       <p>Alongside the core studio he runs <strong>ZBZGames&trade;</strong>, an interactive entertainment branch producing offline simulation and arcade titles and a free browser arcade of forty original games, <strong>ZQuiz</strong>, a live multiplayer quiz platform for classrooms and teams, <strong>ZyeemZia&trade; AI</strong>, a team of free AI agents that guides visitors through the whole estate, reads what they attach and lets anyone design their own AI coworker, and <strong>ZBZAI&trade;</strong>, a free offline AI engine that installs from one file on a Windows PC and serves a whole office, school or home network: it reads office files and hands back the edited ones, adds office coworkers and a studio for video, music and pictures, and grows from the organisation&rsquo;s own documents without anything leaving the building. His current research interest is the intersection he keeps returning to: <strong>AI-driven cyber defence for cyber-physical and post-quantum systems</strong>.</p>
+    </div>
+    <aside class="bio-aside" aria-label="Research at a glance">
+      <div class="box">
+        <p class="k">Research &middot; under review</p>
+        <h4>RL deception for post-quantum IoT</h4>
+        <span class="st">IEEE Embedded Systems Letters</span>
+        <p>Adaptive decoys guard a live ML-KEM-768 gateway on an ESP32 against reconnaissance and downgrade attacks. <a href="https://github.com/zyeemzia/pqc-deception-honeypot" target="_blank" rel="noopener">Open code &rarr;</a></p>
+      </div>
+      <div class="box">
+        <h4>Post-quantum Bluetooth LE</h4>
+        <span class="st">IEEE Embedded Systems Letters</span>
+        <p>Phone-to-ESP32 key establishment measured end to end: the link settings, not the cryptography, set the handshake time.</p>
+      </div>
+      <div class="box">
+        <p class="k">Focus</p>
+        <ul><li>Post-quantum cryptography on embedded hardware</li><li>AI-driven cyber defence</li><li>Offline-first software</li></ul>
+      </div>
+    </aside>
     </div>
   </section>
 
